@@ -11,15 +11,42 @@
     <header>
         <h2 class="text-4xl my-12 text-center font-bold">Phone Hunting</h2>
     </header>
-    <main>
+    <main class="container mx-auto ">
         <section>
-            <div id="div-container" class="grid grid-cols-1 lg:grid-cols-4 gap-5">
+            <input id="input_field" type="text" placeholder="Search Here" class="input input-bordered input-secondary w-full max-w-xs" />
+            <button onclick="handleSearch()" class="btn btn-outline btn-error">Search</button>
+        </section>
+        <section>
+            <div id="div-container" class="grid grid-cols-1 lg:grid-cols-4 gap-5 mt-8">
                 
+            </div>
+            <!-- show all details btn -->
+            <div id="show-All-btn" class="hidden text-center mt-8">
+                <button onclick="showAll()" class="btn btn-outline btn-accent">show all</button>
+            </div>
+        </section>
+        <section>
+            <!-- show details modal -->
+            <div>
+                <!-- Open the modal using ID.showModal() method -->
+                
+                <dialog id="show_modal" class="modal modal-bottom sm:modal-middle">
+                <form method="dialog" class="modal-box">
+                <h3 id="show-details-phone" class="font-bold text-lg"></h3>
+                    <div id="show-details-container">
+
+                    </div>
+                <div class="modal-action">
+                    <!-- if there is a button in form, it will close the modal -->
+                    <button class="btn">Close</button>
+                </div>
+                </form>
+                </dialog>
             </div>
         </section>
     </main>
     <footer>
-
+        
     </footer>
     <script src="./js/card.js"></script>
 </body>
